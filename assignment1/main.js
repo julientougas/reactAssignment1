@@ -1,3 +1,4 @@
+// creates the html for each list item
 var ListItem = React.createClass({
 	propTypes: {
 		id: React.PropTypes.number,
@@ -16,6 +17,8 @@ var ListItem = React.createClass({
 		);
 	}
 });
+
+// adds each ListItem into a ul
 var ListItems = React.createClass({
 	propTypes: {
 		items: React.PropTypes.array.isRequired
@@ -26,6 +29,8 @@ var ListItems = React.createClass({
 		);
 	}
 });
+
+// creates the form and handles changes to their values
 let AddNewForm = React.createClass({
 	propTypes: {
 		listItem: React.PropTypes.object.isRequired,
@@ -69,9 +74,13 @@ let AddNewForm = React.createClass({
 		);
 	}
 });
+
+// changes the state to include the new item
 function updateNewListItem(item) {
 	setState({listItem: item});
 }
+
+//  updates the listItem array with a new item
 function addNewItem(item) {
 	let itemList = state.items;
 	itemList.push(Object.assign({}, {key: itemList.length + 1, id: itemList.length + 1}, item));
@@ -79,6 +88,8 @@ function addNewItem(item) {
     
     
 }
+
+// creates the nav menu
 let NavMenu = React.createClass({
 	render: function() {
 		return (
@@ -98,6 +109,7 @@ let state = {
 	location: ''
 };
 
+// displays the nav menu and ListItems
 let ListPage = React.createClass({
 	propTypes: {
 		items: React.PropTypes.array
@@ -112,6 +124,7 @@ let ListPage = React.createClass({
 	}
 });
 
+// displays the nav menu and Form
 let NewPage = React.createClass({
 	render: function () {
 		return (
@@ -123,6 +136,7 @@ let NewPage = React.createClass({
 	}
 });
 
+// displays the nav menu and creates the html for the item description
 let ItemPage = React.createClass({
 	propTypes: {
 		id: React.PropTypes.number,
@@ -144,6 +158,7 @@ let ItemPage = React.createClass({
 	}
 });
 
+// sets the state of the app and routes it depending on the url
 function setState(changes) {
 	let component;
 	let componentProperties = {};
@@ -181,6 +196,7 @@ function setState(changes) {
 }
 window.addEventListener('hashchange', ()=>setState({location: location.hash}));
 
+// initial state data
 setState({
 	listItem:{
 		name: '',

@@ -1,0 +1,79 @@
+
+.header {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 0;
+    margin 0;
+}
+.nav-menu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.nav-menu li {
+    
+    list-style-type: none;
+    display: inline;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    width: calc(100% / 2);
+    font-size: 2.5rem; 
+}
+.nav-menu a,
+.nav-menu a:link,
+.nav-menu a:visited {
+    color: #027C99;
+    text-decoration: none;
+    text-align: center;
+}
+
+.list {
+    padding-top: 4rem;
+    list-style-type: none;
+}
+.listItem a {
+    text-decoration: none;
+}
+.listItem {
+    height: 4rem;
+}
+.name {
+    font-size: 1.5rem;
+}
+.price {
+}
+.description {
+    display: none;
+}
+#react-app {
+}
+.form {
+    padding-top: 4rem;
+    width: 50%;
+    align-content: center;
+    margin: 0 auto;
+}
+.form input {
+    width: 100%;
+    padding: 5%;
+    margin-bottom: 5%;
+}
+.form textarea {
+    width: 100%;
+    padding: 5%;
+    margin-bottom: 5%;
+}
+.form button {
+    width: 110%;
+    padding: 5%;
+}
+.itemDesc {
+    padding-top: 4rem;
+    width: 50%;
+/*    align-content: center;*/
+    margin: 0 auto;
+}
